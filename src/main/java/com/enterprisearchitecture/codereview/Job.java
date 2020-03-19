@@ -10,12 +10,12 @@ public class Job implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
+	@org.kie.api.definition.type.Label("Number of Executions")
 	private String executionNumber;
 	@org.kie.api.definition.type.Label("Number of Rows")
 	private String rowsPerExecution;
 	@org.kie.api.definition.type.Label("Row Size in KB")
 	private String rowSize;
-	private String executionTime;
 	@org.kie.api.definition.type.Label("Comment")
 	private java.lang.String comment;
 
@@ -49,14 +49,6 @@ public class Job implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public java.lang.String getExecutionTime() {
-		return this.executionTime;
-	}
-
-	public void setExecutionTime(java.lang.String executionTime) {
-		this.executionTime = executionTime;
-	}
-
 	public java.lang.String getRowsPerExecution() {
 		return this.rowsPerExecution;
 	}
@@ -83,13 +75,11 @@ public class Job implements java.io.Serializable {
 
 	public Job(java.lang.String name, java.lang.String executionNumber,
 			java.lang.String rowsPerExecution, java.lang.String rowSize,
-			java.lang.String executionTime, java.lang.String comment,
-			java.lang.String id) {
+			java.lang.String comment, java.lang.String id) {
 		this.name = name;
 		this.executionNumber = executionNumber;
 		this.rowsPerExecution = rowsPerExecution;
 		this.rowSize = rowSize;
-		this.executionTime = executionTime;
 		this.comment = comment;
 		this.id = id;
 	}

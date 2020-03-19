@@ -24,10 +24,8 @@ public class CodeReview implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Requester")
 	private com.enterprisearchitecture.codereview.Requester requester;
 
-	@org.kie.api.definition.type.Label("Jobs")
+	@org.kie.api.definition.type.Label(value = "Jobs")
 	private java.util.List<com.enterprisearchitecture.codereview.Job> jobs;
-
-	private java.lang.String jobList;
 
 	public CodeReview() {
 	}
@@ -98,21 +96,12 @@ public class CodeReview implements java.io.Serializable {
 		this.jobs = jobs;
 	}
 
-	public java.lang.String getJobList() {
-		return this.jobList;
-	}
-
-	public void setJobList(java.lang.String jobList) {
-		this.jobList = jobList;
-	}
-
 	public CodeReview(java.lang.Integer reviewID, java.lang.String reviewName,
 			java.lang.String reviewDescription,
 			java.lang.String dataStageProjectName, java.util.Date dateNeeded,
 			java.lang.String reviewType,
 			com.enterprisearchitecture.codereview.Requester requester,
-			java.util.List<com.enterprisearchitecture.codereview.Job> jobs,
-			java.lang.String jobList) {
+			java.util.List<com.enterprisearchitecture.codereview.Job> jobs) {
 		this.reviewID = reviewID;
 		this.reviewName = reviewName;
 		this.reviewDescription = reviewDescription;
@@ -121,7 +110,6 @@ public class CodeReview implements java.io.Serializable {
 		this.reviewType = reviewType;
 		this.requester = requester;
 		this.jobs = jobs;
-		this.jobList = jobList;
 	}
 
 }
