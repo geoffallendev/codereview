@@ -8,14 +8,17 @@ public class Requester implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "CWS ID")
+	@org.kie.api.definition.type.Label("CWS ID")
 	private java.lang.String cwsID;
-	@org.kie.api.definition.type.Label(value = "Email")
+	@org.kie.api.definition.type.Label("Email")
 	private java.lang.String emailID;
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Contact Number")
+	@org.kie.api.definition.type.Label("Contact Number")
 	private java.lang.String contactNumber;
+
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.String id;
 
 	public Requester() {
 	}
@@ -52,12 +55,22 @@ public class Requester implements java.io.Serializable {
 		this.contactNumber = contactNumber;
 	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
 	public Requester(java.lang.String cwsID, java.lang.String emailID,
-			java.lang.String name, java.lang.String contactNumber) {
+			java.lang.String name, java.lang.String contactNumber,
+			java.lang.String id) {
 		this.cwsID = cwsID;
 		this.emailID = emailID;
 		this.name = name;
 		this.contactNumber = contactNumber;
+		this.id = id;
 	}
 
 }
